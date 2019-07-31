@@ -767,6 +767,7 @@ func BenchmarkReadMerged(b *testing.B) {
 }
 
 func BenchmarkChecksum(b *testing.B) {
+	b.Skip()
 	keySz := []int{KB, 2 * KB, 4 * KB, 8 * KB, 16 * KB, 32 * KB, 64 * KB, 128 * KB, 256 * KB, MB}
 	for _, kz := range keySz {
 		key := make([]byte, kz)
